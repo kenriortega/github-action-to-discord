@@ -18,9 +18,9 @@ jobs:
         node-version: 14.x
     - run: npm install
     - run: npm start
-    - run: |
-        git config user.name kenriortega
-        git config user.email kenriortega@gmail.com
-        git add .
-        git commit -m "Add articles for today"
-        git push
+#     - run: |
+#         git config user.name kenriortega
+#         git config user.email kenriortega@gmail.com
+#         git add .
+#         git commit -m "Add articles for today"
+#         git push
