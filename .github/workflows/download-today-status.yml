@@ -8,7 +8,8 @@ on:
 jobs:
   downloadStatus:
     runs-on: ubuntu-latest
-
+    env:
+      TOKEN: ${{ secrets.DISCORD_TOKEN }}
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js version 14.x
@@ -16,7 +17,7 @@ jobs:
       with:
         node-version: 14.x
     - run: npm install
-    - run: TOKEN=${{ secrets.DISCORD_TOKEN }} npm start
+    - run: npm start
     - run: |
         git config user.name kenriortega
         git config user.email kenriortega@gmail.com
