@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-require('dotenv').config()
+
 const { Client, MessageEmbed } = require('discord.js');
 
 // Create an instance of a Discord client
