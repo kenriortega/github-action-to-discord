@@ -1,4 +1,4 @@
-name: Download latest Flutter Status from dev.to
+name: Download latest Flutter Status from dev.to to FlutterCuba
 
 on:
   workflow_dispatch:
