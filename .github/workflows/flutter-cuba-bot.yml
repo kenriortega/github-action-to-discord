@@ -1,0 +1,21 @@
+name: Download latest Flutter Status from dev.to
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 1 12 * * *
+
+jobs:
+  downloadStatus:
+    runs-on: ubuntu-latest
+    env:
+      TOKEN: ${{ secrets.DISCORD_TOKEN_FCUBA }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js version 14.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - run: npm install
+    - run: npm start
+
